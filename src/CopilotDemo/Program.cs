@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string input = string.Join(" ", args);
+Console.WriteLine($"Input: {input}");
+int sum = StringCalculator.CalculateSum(input);
+Console.WriteLine($"The sum is: {sum}");
