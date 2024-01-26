@@ -1,21 +1,16 @@
-/// <summary>
-/// Represents a calculator that performs calculations on a string of numbers.
-/// </summary>
 public class StringCalculator
 {
-    /// <summary>
-    /// Calculates the sum of numbers in a string.
-    /// </summary>
-    /// <param name="numbers">The string containing numbers separated by spaces.</param>
-    /// <returns>The sum of the numbers.</returns>
     public static int CalculateSum(string numbers)
     {
-        string[] numberArray = numbers.Split(' ');
-        int sum = 0;
+        var num = numbers.Split(" ");
 
-        foreach (string number in numberArray)
+        int sum = 0;
+        foreach (var n in num)
         {
-            sum += int.Parse(number);
+            if (int.TryParse(n, out int result))
+            {
+                sum += result;
+            }
         }
 
         return sum;

@@ -1,54 +1,59 @@
-public class StringCalculatorTests
+using Xunit;
+
+namespace CopilotDemo.Tests
 {
-    [Fact]
-    public void CalculateSum_EmptyString_ReturnsZero()
+    public class StringCalculatorTests
     {
-        // Arrange
-        string numbers = "";
+        [Fact]
+        public void CalculateSum_WithEmptyString_ReturnsZero()
+        {
+            // Arrange
+            string numbers = "";
 
-        // Act
-        int result = StringCalculator.CalculateSum(numbers);
+            // Act
+            int result = StringCalculator.CalculateSum(numbers);
 
-        // Assert
-        Assert.Equal(0, result);
-    }
+            // Assert
+            Assert.Equal(0, result);
+        }
 
-    [Fact]
-    public void CalculateSum_SingleNumber_ReturnsNumber()
-    {
-        // Arrange
-        string numbers = "5";
+        [Fact]
+        public void CalculateSum_WithSingleNumber_ReturnsNumber()
+        {
+            // Arrange
+            string numbers = "5";
 
-        // Act
-        int result = StringCalculator.CalculateSum(numbers);
+            // Act
+            int result = StringCalculator.CalculateSum(numbers);
 
-        // Assert
-        Assert.Equal(5, result);
-    }
+            // Assert
+            Assert.Equal(5, result);
+        }
 
-    [Fact]
-    public void CalculateSum_MultipleNumbers_ReturnsSum()
-    {
-        // Arrange
-        string numbers = "1 2 3 4 5";
+        [Fact]
+        public void CalculateSum_WithMultipleNumbers_ReturnsSum()
+        {
+            // Arrange
+            string numbers = "1 2 3 4 5";
 
-        // Act
-        int result = StringCalculator.CalculateSum(numbers);
+            // Act
+            int result = StringCalculator.CalculateSum(numbers);
 
-        // Assert
-        Assert.Equal(15, result);
-    }
+            // Assert
+            Assert.Equal(15, result);
+        }
 
-    [Fact]
-    public void CalculateSum_InvalidNumber_ReturnsSumOfValidNumbers()
-    {
-        // Arrange
-        string numbers = "1 2 3 a 5";
+        [Fact]
+        public void CalculateSum_WithInvalidNumbers_IgnoresInvalidNumbers()
+        {
+            // Arrange
+            string numbers = "1 2 abc 4 5";
 
-        // Act
-        int result = StringCalculator.CalculateSum(numbers);
+            // Act
+            int result = StringCalculator.CalculateSum(numbers);
 
-        // Assert
-        Assert.Equal(11, result);
+            // Assert
+            Assert.Equal(12, result);
+        }
     }
 }
