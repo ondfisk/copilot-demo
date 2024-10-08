@@ -1,3 +1,11 @@
 {
-    "dotnet.defaultSolution": "src/src.sln"
+    "cSpell.words": [
+        "azuretools",
+        "csdevkit",
+        "devcontainers",
+        "dotnettools",
+        "mechatroner",
+        "pylance",
+        "vscodeintellicode"
+    ]
 }
