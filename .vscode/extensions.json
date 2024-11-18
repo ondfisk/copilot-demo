@@ -1,15 +1,17 @@
 {
     "recommendations": [
+        "davidanson.vscode-markdownlint",
         "github.copilot",
         "github.copilot-chat",
+        "mechatroner.rainbow-csv",
+        "ms-azuretools.vscode-bicep",
         "ms-dotnettools.csharp",
         "ms-dotnettools.csdevkit",
         "ms-dotnettools.vscodeintellicode-csharp",
+        "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-python.black-formatter",
         "ms-vscode.powershell",
-        "ms-azuretools.vscode-bicep",
-        "mechatroner.rainbow-csv"
+        "streetsidesoftware.code-spell-checker"
     ]
 }
